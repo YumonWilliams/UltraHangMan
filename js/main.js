@@ -81,10 +81,30 @@ function showLetterContainer() {
     }
 }
 hideLetterContainer();
+
+function wordSelect() {
+    const randomIndex = Math.floor(Math.random() * wordArray.length);
+    const selectedWord = wordArray[randomIndex];
+    console.log('Selected entry:', selectedWord);
+};
+
+function displayWord() {
+    wordSelect()
+    const wordContainer = document.getElementById('wordContainer');
+    
+    const randomWordSelected = document.createElement('h2');
+
+    randomWordSelected.id = 'gameplayWord';
+
+    wordContainer.appendChild(randomWordSelected);
+    console.log
+
+};
 startButton.addEventListener('click', function() {
     console.log('start button was pressed')
     startButton.style.display = 'none';
     addHangManImage(); 
+    displayWord()
 
     let letterContainer = document.getElementById('letterContainer')
 
@@ -92,7 +112,7 @@ startButton.addEventListener('click', function() {
     //loop trough word array
     wordArray.forEach((item, index) => {
     console.log(`Index ${index}: ${item}`);
-});
+    });
 
 });
 
